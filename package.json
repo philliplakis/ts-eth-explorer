@@ -1,0 +1,20 @@
+{
+  "name": "eth-explorer",
+  "version": "1.0.0",
+  "main": "/dist/index.js",
+  "author": "@philliplakis",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "axios": "^0.23.0",
+    "dotenv": "^10.0.0",
+    "web3": "^1.6.0",
+    "web3-utils": "^1.6.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.3.1",
+    "typescript": "^4.4.4"
+  }
+}
