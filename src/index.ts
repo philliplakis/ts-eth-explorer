@@ -27,6 +27,7 @@ const verifyWebThree = async (): Promise<boolean> => {
 };
 
 const getBalance = async (address: string): Promise<typeof wallet | null> => {
+  console.time("getBalance");
   if (!(await verifyWebThree())) {
     log.error(`Failed to verify web3.`);
     return null;
@@ -73,6 +74,9 @@ const getBalance = async (address: string): Promise<typeof wallet | null> => {
       continue;
     }
   }
+
+  explorerProgressLog(`Completed.`);
+  console.timeEnd("getBalance");
   return wallet;
 };
 
